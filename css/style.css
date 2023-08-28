@@ -12,10 +12,23 @@ header {
 .carousel {
   height: 75%;
   border: 1px solid black;
-  background-image: url("../img/01.webp");
-  background-size: 100% 100%;
-  background-repeat: no-repeat;
   position: relative;
+}
+
+.slide {
+  display: none;
+}
+
+.active {
+  display: block;
+  height: 100%;
+  position: relative;
+}
+
+img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .back-arrow {
@@ -25,19 +38,24 @@ header {
   transform: translateY(-50%);
 }
 
-.next-arrow {
+#go-next {
   position: absolute;
   right: 15px;
   top: 50%;
   transform: translateY(-50%);
+  color: white;
+  z-index: 1;
 }
 
-#text-img {
+.slide-text {
   height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: end;
   align-items: end;
+  position: absolute;
+  right: 25px;
+  bottom: 0;
 }
 
 footer {
